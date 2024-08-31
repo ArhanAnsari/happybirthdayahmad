@@ -1,0 +1,79 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 5px solid #ff0066;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff0066;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.balloons {
+    width: 150px;
+    animation: float 4s infinite;
+}
+
+.celebrate-btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s, background-color 0.3s;
+    margin-top: 20px;
+}
+
+.celebrate-btn:hover {
+    background-color: #ff9933;
+    transform: scale(1.1);
+}
+
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url('confetti.mp4');
+    background-size: cover;
+    opacity: 0;
+    animation: fadeInConfetti 1s forwards;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInConfetti {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
